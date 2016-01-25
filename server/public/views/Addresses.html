@@ -5,7 +5,7 @@
   </select>
 </div>
 
-<div ng-if="currentUser" ng-repeat="address in userAddresses track by $index" class="well col-md-3">
+<div ng-if="currentUser" ng-repeat="address in userAddresses track by $index" class="well">
     <h3>{{address.name}}: {{address.address_type}}</h3>
     <p>{{address.address_street}}</p>
     <p>{{address.address_city}}, {{address.address_state}} {{address.address_zip}}</p>

@@ -7,7 +7,7 @@
   End Date: <input type="date" class="form-control" ng-model="endDate" ng-change="updateOrders()">
 </div>
 
-<div ng-if="currentUser" ng-repeat="order in userOrders track by $index" class="well col-md-3">
+<div ng-if="currentUser" ng-repeat="order in userOrders track by $index" class="well">
     <h3>{{order.name}}: Order #{{order.order_id}}, placed on {{dateParse(order.order_date)}}</h3>
 
     <h3 class="purchase">Total Purchase: {{moneyFormat(order.amount)}}</h3><br>

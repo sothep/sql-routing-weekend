@@ -21,7 +21,7 @@ app.controller('addressController', ['$scope', 'sqlService', function($scope, sq
   sqlService.users().then(function(response){
     $scope.users = response.data;
   });
-  
+
   $scope.changeUser = function(){
     sqlService.userAddresses($scope.currentUser).then(function(response){
       $scope.userAddresses = response.data;
