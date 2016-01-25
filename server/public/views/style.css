@@ -1,0 +1,24 @@
+.jumbotron h1 {
+  color: indigo;
+}
+
+.jumbotron {
+  border: 1px solid indigo;
+}
+
+.purchase {
+  color: red;
+}
+
+.well {
+  border: 1px solid indigo;
+}
+
+h2 {
+  font-style: italic;
+  color: #444444;
+}
+
+.total {
+  color: red;
+}

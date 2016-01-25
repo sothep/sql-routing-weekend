@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app='sqlApp' lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SQL Router Solo</title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="views/style.css">
+    <script type="text/javascript" src="vendor/angular/angular.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/client.min.js"></script>
+    <base href="/">
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1>View addresses and orders for selected users</h1><br>
+      <a href="/Addresses"><button class="btn btn-primary btn-large">View Addresses</button></a>
+      <a href="/Orders"><button class="btn btn-primary btn-large">View Orders</button></a>
+    </div>
+    <div ng-view>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<h2>Select user to view current addresses on file</h2>
+<div class="form-group">
+  <select class="form-control" ng-change="changeUser()" ng-model="currentUser">
+    <option ng-repeat="user in users track by $index" ng-value="user.id">{{user.name}}</option>
+  </select>
+</div>
+
+<div ng-if="currentUser" ng-repeat="address in userAddresses track by $index" class="well col-md-3">
+    <h3>{{address.name}}: {{address.address_type}}</h3>
+    <p>{{address.address_street}}</p>
+    <p>{{address.address_city}}, {{address.address_state}} {{address.address_zip}}</p>
+</div>

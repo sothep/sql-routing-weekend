@@ -1,0 +1,22 @@
+<h2>Select user and start/end dates to view order history</h2>
+<div class="form-group">
+  <select class="form-control" ng-change="updateOrders()" ng-model="currentUser">
+    <option ng-repeat="user in users track by $index" ng-value="user.id">{{user.name}}</option>
+  </select>
+  Start Date: <input type="date" class="form-control" ng-model="startDate" ng-change="updateOrders()">
+  End Date: <input type="date" class="form-control" ng-model="endDate" ng-change="updateOrders()">
+</div>
+
+<div ng-if="currentUser" ng-repeat="order in userOrders track by $index" class="well col-md-3">
+    <h3>{{order.name}}: Order #{{order.order_id}}, placed on {{dateParse(order.order_date)}}</h3>
+
+    <h3 class="purchase">Total Purchase: {{moneyFormat(order.amount)}}</h3><br>
+
+    <h4>Ship To:</h4>
+    <p>{{order.address_street}}</p>
+    <p>{{order.address_city}}, {{order.address_state}} {{order.address_zip}}</p>
+</div>
+
+<div ng-if="currentUser&&startDate&&endDate">
+  <h2 class="total">Total Purchases: {{totalPurchases()}}</h2>
+</div>
